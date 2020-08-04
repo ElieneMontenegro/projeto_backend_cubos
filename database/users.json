@@ -1,0 +1,38 @@
+[
+	{
+		"nome": "diego",
+		"email": "diego",
+		"genero": "m",
+		"id": 1
+	},
+	{
+		"nome": "lila",
+		"email": "lila",
+		"genero": "f",
+		"id": 2
+	},
+	{
+		"nome": "maria",
+		"email": "mari",
+		"genero": "f",
+		"id": 3
+	},
+	{
+		"nome": "mariana",
+		"email": "marianinha",
+		"genero": "f",
+		"id": 4
+	},
+	{
+		"nome": "mariana",
+		"email": "marianinha",
+		"genero": "f",
+		"id": 5
+	},
+	{
+		"nome": "mimi",
+		"email": "zinha",
+		"genero": "f",
+		"id": 6
+	}
+]
