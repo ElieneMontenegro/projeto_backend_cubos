@@ -1,30 +1,16 @@
 [
 	{
-		"nome": "lila",
-		"email": "lila",
-		"genero": "f",
+		"nome": "Luana",
+		"email": "luana.piovanni@hotmail.com",
+		"genero": "feminino",
 		"id": 2,
 		"pos": 2
 	},
 	{
-		"nome": "maria",
-		"email": "mari",
-		"genero": "f",
+		"nome": "Diego",
+		"email": "diego.estrelinha@hotmail.com",
+		"genero": "masculino",
 		"id": 3,
 		"pos": 3
-	},
-	{
-		"nome": "mariana",
-		"email": "marianinha",
-		"genero": "f",
-		"id": 5,
-		"pos": 4
-	},
-	{
-		"nome": "mimi",
-		"email": "zinha",
-		"genero": "f",
-		"id": 6,
-		"pos": 5
 	}
 ]

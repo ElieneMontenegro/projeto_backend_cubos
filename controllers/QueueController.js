@@ -84,15 +84,15 @@ async showLine(req, res) {
 
 async filterLine(req, res){
     const queue = await getQueue();
-    const genero = req.body.genero;
-    const generoLine = _.filter(queue, {genero})
+
+    const generoLine = _.filter(queue, {genero: req.body.genero})
 
     console.log(generoLine);
 
     res.status(201).json({
         message: "Filtering...",
         status: true,
-        queue: queue
+        filtro: generoLine
     });
     
 
