@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "2df0105c-b966-4fcd-9d08-b28b360718ae",
+		"name": "Examples",
+		"description": "Exemplo de uso da API para uma fila de pessoas com os métodos\n\n- `/createUser` - Cadastra usuário;\n- `/addToLine` - Coloca um usuário na última posição da fila;\n- `/findPosition` - Retorna a posição de um usuário a partir de seu email;\n- `/showLine` - Lista os usuários da fila e suas respectivas posições;\n- `/filterLine` - Lista os usuários filtrados a partir de um parâmetro;\n- `/popLine` - Tira a pessoa na primeira posição da fila;\n\nAPI criada com express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Diego",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "diego.estrelinha@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "genero",
+							"value": "masculino",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/createUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createUser"
+					]
+				},
+				"description": "cria um usuário no banco de usuários"
+			},
+			"response": []
+		},
+		{
+			"name": "AddToLine",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/addToLine?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addToLine"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "adiciona um usuário a fila "
+			},
+			"response": []
+		},
+		{
+			"name": "showLine",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/showLine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"showLine"
+					]
+				},
+				"description": "vê a fila de usuários"
+			},
+			"response": []
+		},
+		{
+			"name": "PopLine",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/popLine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"popLine"
+					]
+				},
+				"description": "Retira o primeiro usuário da fila"
+			},
+			"response": []
+		},
+		{
+			"name": "FilterLine",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "genero",
+							"value": "feminino",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/filterLine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filterLine"
+					]
+				},
+				"description": "faz um filtro da fila pelo genero"
+			},
+			"response": []
+		},
+		{
+			"name": "findPosition",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "luana.piovanni@hotmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/findPosition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"findPosition"
+					]
+				},
+				"description": "Buscar usuário na fila pelo email"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

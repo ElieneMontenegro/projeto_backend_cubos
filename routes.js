@@ -12,6 +12,8 @@ routes.get('/showLine', QueueController.showLine)
 routes.get('/filterLine', QueueController.filterLine)
 routes.delete('/popLine', QueueController.popLine)
 
+/*public link to the collection of examples https://www.getpostman.com/collections/0ed2eaa6820f2ef4d0af*/
+
 
 
 module.exports = routes;
